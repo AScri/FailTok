@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hot_fails_fragment">
+
+    <fragment
+        android:id="@+id/hot_fails_fragment"
+        android:name="com.ascri.failtok.ui.main.HotFailsFragmentFails"
+        android:label="HotFailsFragment"
+        tools:layout="@layout/fails_viewer_fragment"
+        />
+
+    <fragment
+        android:id="@+id/new_fails_fragment"
+        android:name="com.ascri.failtok.ui.main.NewFailsFragmentFails"
+        android:label="NewFailsFragment"
+        tools:layout="@layout/fails_viewer_fragment"
+        />
+
+    <fragment
+        android:id="@+id/top_fails_fragment"
+        android:name="com.ascri.failtok.ui.main.TopFailsFragmentFails"
+        android:label="TopFailsFragment"
+        tools:layout="@layout/fails_viewer_fragment"
+        />
+</navigation>

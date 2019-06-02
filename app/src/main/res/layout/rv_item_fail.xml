@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="fail"
+            type="com.ascri.failtok.data.models.Fail" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:controller_layout_id="@layout/rv_item_fail_play_controls"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="300dp"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/thumbnail_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:imageUrl="@{fail.thumbnailUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="48dp"
+            android:gravity="center"
+            android:text="@{fail.title}"
+            android:textColor="@color/lightGray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Streamer uses a green-screen to simulate being an uber driver" />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="48dp"
+            android:drawableTop="@drawable/ic_like"
+            android:drawableTint="@color/lightGray"
+            android:gravity="center"
+            android:text="@{Integer.toString(fail.points)}"
+            android:textColor="@color/lightGray"
+            android:textSize="16sp"
+            android:tint="@color/lightGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/source_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="48dp"
+            android:drawableTop="@drawable/ic_chain"
+            android:drawableTint="@color/lightGray"
+            android:text="@string/source_title"
+            android:textColor="@color/lightGray"
+            android:textSize="16sp"
+            android:tint="@color/lightGray"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

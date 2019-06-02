@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FailTok</string>
+    <string name="title_hot_fails">Hot</string>
+    <string name="title_new_fails">New</string>
+    <string name="title_top_fails">Top</string>
+    <string name="source_title">Source</string>
+</resources>

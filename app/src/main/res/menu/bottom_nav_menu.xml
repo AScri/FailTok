@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/hot_fails_fragment"
+            android:icon="@drawable/ic_fire"
+            android:title="@string/title_hot_fails"/>
+
+    <item
+            android:id="@+id/new_fails_fragment"
+            android:icon="@drawable/ic_time"
+            android:title="@string/title_new_fails"/>
+
+    <item
+            android:id="@+id/top_fails_fragment"
+            android:icon="@drawable/ic_diamond"
+            android:title="@string/title_top_fails"/>
+
+</menu>
